@@ -1,0 +1,256 @@
+.img-profile {
+    width: 2rem;
+    height: 2rem;
+}
+
+.topbar-divider {
+    width: 0;
+    border-right: 1px solid #e3e6f0;
+    height: calc(4.375rem - 2rem);
+    margin: auto 1rem;
+}
+
+.img-logo {
+    width: 74px;
+}
+
+.form-control {
+    border-right: 1px solid gainsboro !important;
+}
+
+.login-page {
+    height: 83vh !important;
+    background-color: lightgray;
+}
+
+.navbar-light {
+    background-color: lightgray;
+}
+
+.register-card {
+    box-shadow: -6px 9px 17px 10px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+}
+
+.register-card-body {
+    border-radius: 10px;
+}
+
+.logo-letter {
+    font-size: 31px;
+    font-weight: 300;
+}
+
+body {
+    background-color: lightgray;
+}
+
+.card-header {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-style: none;
+}
+
+.login-card {
+    box-shadow: -3px 13px 20px 16px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2);
+    margin-bottom: 1rem;
+    border-radius: 15px;
+}
+
+.shadow-button {
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2);
+}
+
+.auth-font {
+    font-size: 2vh;
+}
+
+.nav-item-2 {
+    width: 20%;
+}
+
+.nav-item-3 {
+    width: 33.3333333%;
+}
+
+.nav-item-4 {
+    width: 25%;
+}
+
+.nav-item-5 {
+    width: 50%;
+}
+
+.nav-link-3 {
+    color: black;
+    font-weight: bold;
+    border-style: none !important;
+}
+
+.nav-link-3.active {
+    color: coral !important;
+    font-weight: bold;
+    background-color: #f4f6f9 !important;
+}
+
+.nav-tab-3 {
+    border-style: none !important;
+    /* transition: margin-left .3s ease-in-out; */
+    margin-left: 250px;
+}
+
+.pt-pb {
+    padding: 10px 0px 10px 9px;
+}
+
+.main-header {
+    border-style: none;
+}
+
+.os-content {
+    padding: 0px !important;
+}
+
+.nav-link-side.active {
+    background-color: #f4f6f9 !important;
+    color: black !important;
+    font-weight: bold !important;
+    border-radius: 0 !important;
+}
+
+.brand-link {
+    color: black !important;
+}
+
+.signout-img {
+    width: 23px;
+}
+
+.signout-item {
+    padding-top: 7px;
+}
+
+.right-editbtn {
+    background-color: lightgray;
+    vertical-align: middle !important;
+    text-align: center;
+}
+
+.right-addbtn {
+    background-color: rgba(16, 153, 11, 0.842);
+    vertical-align: middle !important;
+    text-align: center;
+    color: white;
+}
+
+.fa-plus {
+    color: white;
+}
+
+.add-font {
+    width: 90%;
+    text-align: center;
+    color: rgba(16, 153, 11, 0.842);
+    font-weight: bold;
+}
+
+.btn-red {
+    color: white;
+    background-color: rgba(240, 11, 11, 0.815);
+}
+
+.space-h3 {
+    height: 30px;
+}
+
+.default-p {
+    padding-left: 20px;
+}
+
+.item-none {
+    list-style: none;
+}
+
+.padding-r20 {
+    padding-right: 20px;
+    float: left;
+}
+
+.w-90 {
+    width: 90%;
+    float: left;
+}
+
+.shadow-btn {
+    box-shadow: -1px 3px 0px 0px #aaaaaa;
+}
+
+.modal-title {
+    text-align: center;
+}
+
+.right-deletebtn {
+    color: white;
+    background-color: coral;
+    text-align: center;
+}
+
+.notification-icon {
+    color: red;
+}
+
+.coaching-icon {
+    color: rgb(177, 177, 8);
+}
+
+.activation-icon {
+    color: rgb(11, 11, 212);
+}
+
+.analytics-icon {
+    color: rgb(204, 55, 10);
+}
+
+.content-icon {
+    color: rgb(168, 248, 9);
+}
+
+.white-b {
+    background-color: white;
+}
+
+.center {
+    text-align: center;
+}
+
+.select2-container--default .select2-selection--single {
+    border: 1px solid #ced4da !important;
+    padding: .46875rem .75rem !important;
+    height: calc(2.25rem + 2px) !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    color: darkslategrey !important;
+}
+
+.dropdown-menu.show {
+    padding: 10px !important;
+    width: 100%;
+}
+
+.btn-group, .btn-group-vertical {
+    width: 100% !important;
+}
+
+.order-arrow {
+    font-size: 21px;
+    cursor: pointer;
+    left: 6px;
+    top: 2px;
+    position: relative;
+}
+
+.order-arrow.disabled {
+    color: gray;
+}

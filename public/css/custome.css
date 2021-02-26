@@ -1,0 +1,171 @@
+.chart-section {
+    padding: 40px;
+    margin: 50px;
+}
+
+.content-wrapper {
+    min-height: unset !important;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+body {
+    /*background: #f2f2f2;*/
+    font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.social-box .box {
+    background: #FFF;
+    border-radius: 10px;
+    padding: 40px 10px;
+    margin: 20px 0px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.social-box .box:hover {
+    box-shadow: 0 0 6px #4183D7;
+}
+
+.social-box .box .box-text {
+    margin: 20px 0px;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.social-box .box .box-btn a {
+    text-decoration: none;
+    color: #4183D7;
+    font-size: 16px;
+}
+
+.fa {
+    color: #4183D7;
+}
+
+.date-filter-chart {
+    width: 30%;
+    margin: auto;
+}
+
+.custom-file-label {
+    /*right: -70px!important;*/
+}
+
+.chart-info {
+    margin: 20px 0px;
+}
+
+.chart-title {
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.display-none {
+    display: none;
+}
+
+.general-analytics-first-row {
+    padding: 25px 0;
+}
+
+.general-analytics-first-row>div:not(:last-child) {
+    border-right: 2px solid coral;
+}
+
+.chart_view .row>div {
+    text-align: center;
+}
+
+.chart_view .row>div span:first-child {
+    color: coral;
+    font-weight: bold;
+}
+
+.chart_view .row>div span {
+    font-size: 20px;
+}
+
+.weekly-check-chart_wrapper {
+    border: 1px solid gray;
+    border-radius: 8px;
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+.weekly-check-chart_wrapper>div {
+    position: relative;
+    padding: 5px 20px;
+    background-color: coral;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.weekly-check-chart_wrapper>div>span {
+    color: white!important;
+    font-size: 25px!important;
+    font-weight: bold!important;
+}
+
+.monthly-check-chart-wrapper>div {
+    position: relative;
+    padding: 5px 20px;
+    background-color: #5064ed;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+#main_causes_table .table td, .table th {
+    border-bottom: 1px dotted #dee2e6;
+    border-top: none;
+    font-size: 20px;
+}
+
+#main_causes_table .table td:first-child, #main_causes_table .table td:last-child {
+    border-bottom: none;
+}
+
+.toggle_chart_view {
+    max-width: 400px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    z-index: 1000;
+}
+
+.sub-tool-form, .sub-tool-table {
+    display: none;
+}
+
+.pdf-generating {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: lightgray;
+    display: none;
+    z-index: 1000000000000;
+}
+
+.pdf-generating p {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    /* color: white; */
+}
+
+.btn-generate-pdf {
+    position: absolute;
+    right: 16px;
+}

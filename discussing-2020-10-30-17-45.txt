@@ -1,0 +1,242 @@
+hi
+first let me show you where to add the CRUD functionalities for the breathing_tool ok ?
+Ok.
+you can extend this form and add all the functionalities there .. that's the simplest way .
+
+You said you added user_level in tools table.
+So, if you I extend this form, what should I do?
+It's the form that is relative with vieva_tools. yes?
+
+yes i have added the user_level so that we can allow only some type of users to use the related tool.
+
+Yeah, I understood that.
+What i want to know is the relationship between vieva_tools and vieva_mindfulness_tool, . . . the 		self_hypnosis, guided_meditation, breathing_tool, mindfulness_tool
+i got it .. the vieva_tools is simply a list of all tools we have .. and the details of each tool is stored into the table reserved for it .. 
+
+Then, we need to add some fields into the vieva_tools table for the relationship. e.g. tool_type.  yes?
+
+yes you can do that
+
+In this form, 
+there should be a select element that user can select tool type.
+And when user select a tool type, the form fields should be changed for each tool type, defined in database tables.
+
+am i right?
+you are absolutly right 
+
+This table has the same fields like vieva_tools table.
+In this case, where should I store e.g. title_english ?
+we can make simply the change into the vieva_tool table by adding afield called tool_type and that's it .. 
+
+
+I mean there are same fields in two tables, vieva_tools and vieva_self_hypnosis
+yes .. we need them all 
+
+which table field should I use to store title_english?
+as you know each tool has a title ..
+
+Ok, i see
+
+i think it's not clear for you why we have overall titles and so on .. 
+for the breathing tool for example .. the title is breathing tool .. but we can have a relaxing breathing tool by adding some parameters like how many ms to breath in and out .. and how many secondes to hold .. and so on .. we can have a sleep-
+
+In this form, there's tool_name english right?
+yes
+It's stored in name_english in tools table. right?
+yes .. but moment please .. 
+the main category is breathing tool and the subcategories will be something else .. i hope you understood it now 
+got it.
+If this tool name is stored in name_english in tools table, what should I store for the title_in_english	????
+I should add form field for it?
+
+yes please .. because we wil have a subcategory of the breathing tool category
+
+So, for breathing_tool
+I should add below fields for form
+
+english tool name
+french tool name
+english description
+french description
+--------line ---------------
+english title
+french title
+breathe_in
+.d..
+n
+rightv?er very good .. you got it now .. u
+b
+
+ut you need simply to add a line between the main information for the tool and the specification 
+
+
+yes ... very good 
+I should make uploads for image_url and sound_link?
+
+yes please... 
+
+next question :D
+
+where can I find the page for vieva_corporate_clients_settings table?
+
+ok .. let me show you where 
+please click on the project .. i mean the website
+in this form 
+I can just store a number?
+yes 
+
+It means that I should add hours number field in this form and save it into corporate_client_setting table. right? yes
+
+Thanks.
+Next question
+I should add order in this page?
+
+the next table and the last one is video_lessons_settings .. i have added a field there called "order_number" .. the field is to define in which order we will display the video_lessons.
+
+YOu said like aboveyes
+yes
+Can I use erini's order function?
+ofcourse .. you can use anything from erni's script .. you will need to add the validation key from there also .. 
+
+Next
+
+	- we have a table where I have added more than 3 fields .. it's the table: coaching_reports table.
+I think these are: coach_name, user_first_name, user_last_name, user_email, duration, etc.
+
+where can I find the page for coaching_reports table?
+I should add form fields for added database fields?
+yes please 
+
+Got it
+
+2. Generating the validation key is already implemented by Eirini, the import function for the coaching_report is also already implemented .. we need simply to display the content of the important data as table so that the superadmin can apply any CRUD functionality there
+the import function is implemented by me into the script you have already.
+
+Your words above
+
+yes
+
+It means that I should create a new page that superadmin can CRUD the data of coaching_report?
+
+yes please .. once we import coaching reports_data from a csv-file we should have the possiblity to edit/add/delete/.. each data record
+                                           Can you send me an example of the csv file?
+ok .. no problem .. but it's now complete .. the csv-contain all fields ..
+i think the functionality to import it is already implemented .. 
+please recheck 
+Importing csv is no problem.
+I just want to check the csv file, how does it look like and which datas are contained, etc.
+So, please send me a example of csv, for better understanding...
+no pb .. i will do 
+Thanks
+And where should I add this page in the dashboard?
+coaching_report page ....
+you will need to add a button there "import csv-data" and you need to isplay the result as table so thaunt the superadmin can get access to each data record .. i hope you 
+
+It shows all the data of one record in the modal.
+I should display all the datas in table, when user import csv
+And the csv will contain all the data like this modal form. no....
+the form you show me will be used if the superadmin wants to edit/add/delete .. a datarecord
+Yeah, I understood that. I just say it as an example.
+So, csv file will contain the datas like this form?
+yes
+I see. When user imports the csv file, I should store the datas in the database and display as a table?
+yes
+Ok, please don't thefo table wil
+
+the table will be very ugly .. that's why we need to display only the report date, the coach_name, the user first and last name and his email.
+ Got it
+Please don't forget the sample csv file 
+don't worry i will send it to you 
+Thanks
+:D
+Next
+
+The next is very easy ... we have a table called challenges ... we need to create a form for challenges so that the superadmin can add/edit/delete any challenge ... after it's done we need to assign a challenge to each video_lesson .. as you know we assign to each video_lesson a quiz ( need also to be implemented, I have already created 2 tables for that) , we assign also to a video_lesson a challenge .. we need to implement that ..
+
+This is your word
+yes
+Where can I find a page for challenge? I should create new page?
+
+yes you need t to create a new one 
+In the video_lessons table, we need a field challenge_id for example?
+we have already added it into the table viede_lessons_settings .. please check 
+
+Here, I should add challenge select element so that user can assign a challenge to video lesson. right?y
+es
+yes
+Got it fully
+
+Final question :D :D :D
+
+Based on the queries we have build till now ( please check the analytics-page of the dashboard) we need to generate charts and we need to generate pdf-file based on the created charts .. i have added some samples into the script you have now ...i can send you a samples how the charts should look like .. you can use charts.js or d3.js .. or whatever you want
+
+It's your word, also.
+where should I add these charts? I mean which page. 
+I should create new page ?
+you can create a new one or simply add an icon to the analytics page with the charts logo .. once the user click on it he will see the charts related to the timeframe selected
+Which position will be good for the Icon?
+feel free to choose the best position 
+
+radio element like...   table view / chart view
+And it'll toggle the views. what do you think?
+ok no pb
+And . .. 
+what's this Plan starting date?
+you can check the corporate client settings .. you will find there a fied called starting date
+
+These charts are for Per Client tab?
+the charts can be displayed for corporate clients or for corporate_client_groups ..
+each corporate client can have many teams or groups .. and we should have the possiblity to specify which client or which client_group
+for example as client IBM, and in IBM we have a group called marketing, another one called dev and another one called direction or IT
+i hope you understood what i mean
+Yeah. got it.
+
+There are three tabs: General, Per client, per user
+The charts should be displayed for all the three tabs?
+for each tab we need charts.
+
+that's why i told you to add a chart icon near each tab...
+
+This General App stats have "558 enrolled users to date"
+But in the general tab, there's no enrolled users. But in the per client tab, there's enrolled users.
+In that case, how can I handle it?
+very easy .. first of all the general status shown now in the screensho is not the same one as in the pdf-file .. the content of the pdf-file is for a specific corporate_client...
+to know how many corporate_client_users are enrolled you need to make a simply sql_query
+ count select *from users where ( i think user_level= 5 for corporate_user .. i can't remember ) where corporate_id = x ( x for the selected corporate ) ... i think you know what i mean 
+
+Yeah, got it. thanks
+For the general tabs, it displays stats data for all the clients and users. right?
+yes
+Ok,got it.
+
+When timeframe is changed, the data should be changed, too. right?
+yes
+ also charts
+yes
+
+Now I think I clearified almost all the things.
+Thanks for your good explanations.
+
+youN are welcome 
+i hope you can finish the task very soon .. i am in hurry 
+wiSthur it ..
+Sure, of course, I will finish asap. work hard.
+No worries about that.
+
+As I said before, you're so difficult to be online. 
+Thanks anyway.
+you are welcome 
+Can I disconnect TV session?
+yes 
+When can you be online again?
+in about 5 hours
+Ok, 
+
+
+
+
+
+
+
+
+
