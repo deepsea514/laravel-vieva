@@ -250,6 +250,7 @@
                     <th>Language</th>
                     <th>Duration</th>
                     <th>Client Feedback</th>
+                    <th>Rating</th>
                     <th>Status</th>
                     <th style="width:100px" class="right-editbtn">
                       <span>
@@ -293,6 +294,7 @@
                           Much worse
                         @endif
                       </td>
+                      <td>{{ $first_coaching_report->rating }}</td>
                       <td>
                         @if ($first_coaching_report->status == 1)
                           Done
