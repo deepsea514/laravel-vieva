@@ -293,7 +293,7 @@
                 <!-- /.card -->
                 </div>
 
-                <h5 class="pt-pb" style="font-weight: bold">Reasons for sessions1</h5>
+                <h5 class="pt-pb" style="font-weight: bold">Reasons for sessions</h5>
                 <div class="card card-primary">
                     
                     <div class="card-body">
@@ -600,7 +600,7 @@
                         </tbody>
                     </table>
 
-                    <h5 class="pt-pb" style="font-weight: bold">Reasons for sessions2</h5>
+                    <h5 class="pt-pb" style="font-weight: bold">Reasons for sessions</h5>
                     
                     <table>
                         <tr>

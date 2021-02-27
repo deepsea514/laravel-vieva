@@ -397,8 +397,8 @@ class GeneralCalendar extends Controller
             $addictions = 0;
             $others = 0;
         }
-        
-        
+
+        $Seances = Motif_seance::get();
 
         $output = '<div class="card card-primary">
                 
@@ -427,49 +427,93 @@ class GeneralCalendar extends Controller
                 </div>
     
                 <h5 class="pt-pb" style="font-weight: bold">Reasons for sessions</h5>
-                <div class="card card-primary">
-                    
-                    <div class="card-body">
-                        
-                        <table class="table table-bordered">
-                            <tbody>
-                                <tr>
-                                    <td style="width:40%">Depression</td>
-                                    <td>'.round($depression, 2).'%</td>
-                                </tr>
-                                <tr>
-                                    <td>Parenting issues</td>
-                                    <td>'.round($parenting_issues, 2).'%</td>
-                                </tr>
-                                <tr>
-                                    <td>Relationship issues</td>
-                                    <td>'.round($relationship_issues, 2).'%</td>
-                                </tr>
-                                <tr>
-                                    <td>Mourning</td>
-                                    <td>'.round($mourning, 2).'%</td>
-                                </tr>
-                                <tr>
-                                    <td>Conflictss</td>
-                                    <td>'.round($conflicts, 2).'%</td>
-                                </tr>
-                                <tr>
-                                    <td>Self-confidence</td>
-                                    <td>'.round($self_confidence, 2).'%</td>
-                                </tr>
-                                <tr>
-                                    <td>Addictions</td>
-                                    <td>'.round($addictions, 2).'%</td>
-                                </tr>
-                                <tr>
-                                    <td>Others</td>
-                                    <td>'.round($others, 2).'%</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                <!-- /.card -->
-                </div>';
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:50%">
+                            <div class="card card-primary">
+                                
+                                <div class="card-body">
+                                    
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:40%">Depression</td>
+                                                <td>'.round($depression, 2).'%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Parenting issues</td>
+                                                <td>'.round($parenting_issues, 2).'%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Relationship issues</td>
+                                                <td>'.round($relationship_issues, 2).'%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mourning</td>
+                                                <td>'.round($mourning, 2).'%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Conflictss</td>
+                                                <td>'.round($conflicts, 2).'%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Self-confidence</td>
+                                                <td>'.round($self_confidence, 2).'%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Addictions</td>
+                                                <td>'.round($addictions, 2).'%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Others</td>
+                                                <td>'.round($others, 2).'%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            <!-- /.card -->
+                            </div>
+                        </td>
+                        <td style="width:50%">
+                            <div class="card card-primary">
+                                
+                                <div class="card-body">
+                                    
+                                    <table class="table table-bordered">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:40%"><input type="checkbox"/>&nbsp;Depression</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"/>&nbsp;Parenting issues</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"/>&nbsp;Relationship issues</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"/>&nbsp;Mourning</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"/>&nbsp;Conflictss</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"/>&nbsp;Self-confidence</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"/>&nbsp;Addictions</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox"/>&nbsp;Others</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            <!-- /.card -->
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                ';
         echo $output;
     }  
 }
