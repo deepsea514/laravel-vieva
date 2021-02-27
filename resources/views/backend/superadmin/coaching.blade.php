@@ -138,7 +138,7 @@
                               <h3 class="chart-title">&nbsp;&nbsp;|&nbsp;&nbsp;</h3>
                             </td>
                             <td>
-                              <h3 class="chart-sub-title">??%</h3>
+                              <h3 class="chart-sub-title">{{number_format(count($first_coaching_reports) / $sumDuration * 100, 2)}}%</h3>
                             </td>
                             <td>
                               <h5 class="chart-title">use rate</h5>
