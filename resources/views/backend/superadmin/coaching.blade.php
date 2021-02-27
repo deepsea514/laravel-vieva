@@ -116,6 +116,36 @@
                         <div class="box-title">
                           <h3 class="chart-title">Coaching reports</h3>
                         </div>
+                        <div class="box-title">
+                        <table>
+                          <tr style="text-align:center">
+                            <td>
+                              <h3 class="chart-sub-title">{{count($first_coaching_reports)}}</h3>
+                            </td>
+                            <td>
+                              <h5 class="chart-title">Sessions completed</h5>
+                            </td>
+                            <td>
+                              <h3 class="chart-title">&nbsp;&nbsp;|&nbsp;&nbsp;</h3>
+                            </td>
+                            <td>
+                              <h3 class="chart-sub-title">{{$sumDuration}} hours</h3>
+                            </td>
+                            <td>
+                              <h5 class="chart-title">license</h5>
+                            </td>
+                            <td>
+                              <h3 class="chart-title">&nbsp;&nbsp;|&nbsp;&nbsp;</h3>
+                            </td>
+                            <td>
+                              <h3 class="chart-sub-title">??%</h3>
+                            </td>
+                            <td>
+                              <h5 class="chart-title">use rate</h5>
+                            </td>
+                          </tr>
+                        </table>
+                        </div>
                         <canvas id="bar-chart-grouped" width="800" height="450"></canvas>
                       </div>
                     </div>
@@ -229,13 +259,12 @@
           --}}
         </h4>
         <div class="card card-primary">
-
           <div class="card-body">
             <div id="show_report_user_html">
               <table class="table table-bordered" id="coaching_report_table">
                 <thead>
                   <tr>
-                    <td class="add-font" colspan="8">Add session report</td>
+                    <td class="add-font" colspan="10">Add session report</td>
                     <td class="right-addbtn" data-toggle="modal" data-target="#modal-report-add">
                       <span>
                         <i class="fa fa-plus"></i>
@@ -243,16 +272,17 @@
                     </td>
                   </tr>
                   <tr>
-                    <th>Session Date</th>
-                    <th>Coach Name</th>
-                    <th>First/Last Name</th>
-                    <th>Report Date</th>
-                    <th>Language</th>
-                    <th>Duration</th>
-                    <th>Client Feedback</th>
-                    <th>Rating</th>
-                    <th>Status</th>
-                    <th style="width:100px" class="right-editbtn">
+                    <th style="width:10%">Session Date</th>
+                    <th style="width:10%">Coach Name</th>
+                    <th style="width:10%">First/Last Name</th>
+                    <th style="width:10%">Report Date</th>
+                    <th style="width:10%">Dura tion</th>
+                    <th style="width:10%">Lang uage</th>
+                    <th style="width:10%">Client Feed back</th>
+                    <th style="width:5%">Retur ning</th>
+                    <th style="width:5%">Rat ing</th>
+                    <th style="width:10%">Status</th>
+                    <th style="width:10%" class="right-editbtn">
                       <span>
                         <i class="fa fa-edit"></i>
                       </span>
@@ -262,26 +292,26 @@
                 <tbody>
                   @foreach ($first_coaching_reports as $first_coaching_report)
                     <tr>
-                      <td>{{ date('d F Y', strtotime($first_coaching_report->session_date)) }}</td>
-                      <td>{{ $first_coaching_report->coach_name }}</td>
-                      <td>{{ $first_coaching_report->user_first_name }} {{ $first_coaching_report->user_last_name }}</td>
-                      <td>{{ date('d F Y', strtotime($first_coaching_report->report_date)) }}</td>
+                      <td style="width:10%">{{ date('d F Y', strtotime($first_coaching_report->session_date)) }}</td>
+                      <td style="width:10%">{{ $first_coaching_report->coach_name }}</td>
+                      <td style="width:10%">{{ $first_coaching_report->user_first_name }} {{ $first_coaching_report->user_last_name }}</td>
+                      <td style="width:10%">{{ date('d F Y', strtotime($first_coaching_report->report_date)) }}</td>
 
-                      <td>
-                        @if ($first_coaching_report->language == 1)
+                      <td style="width:10%">
+                        @if ($first_coaching_report->duration == 1)
                           30 Minutes
-                        @elseif ($first_coaching_report->language == 2)
+                        @elseif ($first_coaching_report->duration == 2)
                           60 Minutes
                         @endif
                       </td>
-                      <td>
+                      <td style="width:10%">
                         @if ($first_coaching_report->language == 1)
                           English
                         @elseif ($first_coaching_report->language == 2)
                           French
                         @endif
                       </td>
-                      <td>
+                      <td style="width:10%">
                         @if ($first_coaching_report->client_feedbck == 1)
                           Much better
                         @elseif ($first_coaching_report->client_feedbck == 2)
@@ -294,8 +324,9 @@
                           Much worse
                         @endif
                       </td>
-                      <td>{{ $first_coaching_report->rating }}</td>
-                      <td>
+                      <td style="width:5%">{{ $returning_sessions }}</td>
+                      <td style="width:5%">{{ $first_coaching_report->rating }}</td>
+                      <td style="width:10%">
                         @if ($first_coaching_report->status == 1)
                           Done
                         @elseif ($first_coaching_report->status == 2)
@@ -306,7 +337,7 @@
                           Cancelled
                         @endif
                       </td>
-                      <td style="width:100px" class="right-editbtn" data-toggle="modal"
+                      <td style="width:10%" class="right-editbtn" data-toggle="modal"
                         data-target="#modal-report-edit{{ $first_coaching_report->report_id }}">
                         <span>
                           <i class="fa fa-edit" style="cursor:pointer"></i>

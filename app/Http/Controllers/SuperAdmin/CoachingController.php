@@ -38,12 +38,24 @@ class CoachingController extends Controller
         $first_coaching_reports = Coaching_reports::where('user_email', $first_user_email)->get();
         // dd($first_coaching_reports);
 
+        $sumDuration = 0;
+        $returning_sessions = 0;
+        foreach ($first_coaching_reports as $report) {
+            $sumDuration += $report->duration;
+            if($first_coaching_reports[0]->coach_name != $report->coach_name){
+                $returning_sessions++;
+            }
+        }
+        $sumDuration /= 2;
+        
         return view('backend.superadmin.coaching', compact(
             'onlyusers',
             'first_user',
             'coaches',
             'session_reasons',
-            'first_coaching_reports'
+            'first_coaching_reports',
+            'sumDuration',
+            'returning_sessions'
         ));
     }
 
@@ -601,6 +613,7 @@ class CoachingController extends Controller
                 }
             }
         }
+        
 
         if (count($record) >= 0) {
             for ($i = 1; $i < count($record); $i++) {
@@ -622,12 +635,15 @@ class CoachingController extends Controller
                         'status' => $row[12],
                         'client_feedbck' => $row[13],
                     ];
-
+                    $session_dates = explode("/", $row[2]);
+                    $session_date = $session_dates[2].'-'.$session_dates[1].'-'.$session_dates[0];
+                    $report_dates = explode("/", $row[12]);
+                    $report_date = explode(" ", $report_dates[2])[0].'-'.$report_dates[1].'-'.$report_dates[0].' '.explode(" ", $report_dates[2])[1];
                     Coaching_reports::create([
                         'user_id' => 0,
                         'report_id' => str_replace('"', '', $row[0]),
                         'duration' => str_replace('"', '', $row[1]),
-                        'session_date' => str_replace('"', '', $row[2]),
+                        'session_date' => str_replace('"', '', $session_date),
                         'motif_seance_id' => str_replace('"', '', $row[3]),
                         'rating' => str_replace('"', '', $row[4]),
                         'coach_name' => str_replace('"', '', $row[5]),
@@ -635,12 +651,11 @@ class CoachingController extends Controller
                         'user_last_name' => str_replace('"', '', $row[7]),
                         'user_email' => str_replace('"', '', $row[8]),
                         'language' => str_replace('"', '', $row[9]),
-                        'note' => str_replace('"', '', $row[10]),
-                        'report_date' => str_replace('"', '', $row[11]),
-                        'status' => str_replace('"', '', $row[12]),
+                        'status' => str_replace('"', '', $row[10]),
+                        'note' => str_replace('"', '', $row[11]),
+                        'report_date' => str_replace('"', '', $report_date),
                         'client_feedbck' => str_replace('"', '', $row[13]),
                     ]);
-
                 }
             }
         }

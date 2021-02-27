@@ -1285,7 +1285,7 @@ class AnalyticsController extends Controller
     {
         $data = [];
 
-        return view('reports-pdf');
+        // return view('reports-pdf');
 
         // share data to view
         view()->share('title', "title");

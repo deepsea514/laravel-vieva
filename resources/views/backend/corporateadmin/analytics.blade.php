@@ -293,7 +293,7 @@
                 <!-- /.card -->
                 </div>
 
-                <h5 class="pt-pb" style="font-weight: bold">Reasons for sessions</h5>
+                <h5 class="pt-pb" style="font-weight: bold">Reasons for sessions1</h5>
                 <div class="card card-primary">
                     
                     <div class="card-body">
@@ -600,46 +600,100 @@
                         </tbody>
                     </table>
 
-                    <h5 class="pt-pb" style="font-weight: bold">Reasons for sessions</h5>
+                    <h5 class="pt-pb" style="font-weight: bold">Reasons for sessions2</h5>
                     
-                            
-                    <table class="table table-bordered white-b">
-                        <tbody>
-                            <tr>
-                                <td style="width:40%">Depression</td>
-                                <td>{{ $t_depression_pro }}%</td>
-                            </tr>
-                            <tr>
-                                <td>Parenting issues</td>
-                                <td>{{ $t_parenting_pro }}%</td>
-                            </tr>
-                            <tr>
-                                <td>Relationship issues</td>
-                                <td>{{ $t_relationship_pro }}%</td>
-                            </tr>
-                            <tr>
-                                <td>Mourning</td>
-                                <td>{{ $t_mouring_pro }}%</td>
-                            </tr>
-                            <tr>
-                                <td>Conflictss</td>
-                                <td>{{ $t_conflict_pro }}%</td>
-                            </tr>
-                            <tr>
-                                <td>Self-confidence</td>
-                                <td>{{ $t_confidence_pro }}%</td>
-                            </tr>
-                            <tr>
-                                <td>Addictions</td>
-                                <td>{{ $t_addiction_pro }}%</td>
-                            </tr>
-                            <tr>
-                                <td>Others</td>
-                                <td>{{ $t_other_pro }}%</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>       
+                    <table>
+                        <tr>
+                            <td>                            
+                                <table class="table table-bordered white-b">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width:40%">Depression</td>
+                                            <td>{{ $t_depression_pro }}%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Parenting issues</td>
+                                            <td>{{ $t_parenting_pro }}%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Relationship issues</td>
+                                            <td>{{ $t_relationship_pro }}%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mourning</td>
+                                            <td>{{ $t_mouring_pro }}%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Conflictss</td>
+                                            <td>{{ $t_conflict_pro }}%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Self-confidence</td>
+                                            <td>{{ $t_confidence_pro }}%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Addictions</td>
+                                            <td>{{ $t_addiction_pro }}%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Others</td>
+                                            <td>{{ $t_other_pro }}%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width:40%">Plan starting date</td>
+                                            <td>{{ $plan_start }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Plan expiration date</td>
+                                            <td>{{ $plan_end }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Number of licenses</td>
+                                            <td>{{ $licence_num }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Enrolled users</td>
+                                            <td>{{ $enrolled_users }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Online users</td>
+                                            <td>{{ $online_users }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>French language</td>
+                                            <td>{{ $fr_users_pro }}%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>English language</td>
+                                            <td>{{ $en_users_pro }}%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Accounts created on mobile</td>
+                                            <td>{{ $mobile_acc_pro }}%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Accounts created on the web</td>
+                                            <td>{{ $desktop_acc_pro }}%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Weekly checks submitted</td>
+                                            <td>{{ $weekly_checks }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Monthly checks submitted</td>
+                                            <td>{{ $monthly_checks }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>       
                 <div class="space-h3"></div>
             </div>
         </div>

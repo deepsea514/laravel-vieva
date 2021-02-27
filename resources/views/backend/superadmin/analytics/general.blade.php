@@ -330,7 +330,7 @@
         <!-- /.card -->
       </div>
 
-      <h5 class="pt-pb" style="font-weight: bold">Reasons for sessions</h5>
+      <h5 class="pt-pb" style="font-weight: bold">Reasons for sessions3</h5>
       <div class="card card-primary">
 
         <div class="card-body">
