@@ -38,6 +38,16 @@ class Coaching_reports extends Model
         return $return;
     }
 
+    public function getSeances()
+    {
+        return DB::select("SELECT vieva_motif_seance.motif_seance_id, vieva_motif_seance.seance_name
+        , IF(ISNULL(_qry.cnt), 0, _qry.cnt) as cnt
+        FROM vieva_motif_seance
+        LEFT JOIN (SELECT COUNT(motif_seance_id) as cnt, motif_seance_id
+        From vieva_coaching_reports
+        GROUP BY motif_seance_id) as _qry ON vieva_motif_seance.motif_seance_id = _qry.motif_seance_id");
+    }
+
     public function getUserFirstNameAttribute($value)
     {
         return ucfirst(strtolower($value));

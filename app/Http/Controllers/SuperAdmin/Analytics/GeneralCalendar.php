@@ -398,7 +398,16 @@ class GeneralCalendar extends Controller
             $others = 0;
         }
 
-        $Seances = Motif_seance::get();
+        $coaching_reports = new Coaching_reports();
+        $motif_seances = $coaching_reports->getSeances();
+        $motif_seances_count = 0;
+        foreach ($motif_seances as $motif_seance) {
+            $motif_seances_count += $motif_seance->cnt;
+        }
+        // $motif_seances = Motif_seance::get();
+        // foreach ($motif_seances as $motif_seance) {
+        //     echo array_count_values(array_column($coaching_reports, "seance_name"))[$motif_seance->seance_name];
+        // }
 
         $output = '<div class="card card-primary">
                 
@@ -429,7 +438,7 @@ class GeneralCalendar extends Controller
                 <h5 class="pt-pb" style="font-weight: bold">Reasons for sessions</h5>
                 <table style="width:100%">
                     <tr>
-                        <td style="width:50%">
+                        <td style="width:50%; vertical-align: top;">
                             <div class="card card-primary">
                                 
                                 <div class="card-body">
@@ -482,28 +491,52 @@ class GeneralCalendar extends Controller
                                     <table class="table table-bordered">
                                         <tbody>
                                             <tr>
-                                                <td style="width:40%"><input type="checkbox"/>&nbsp;Depression</td>
+                                                <td style="width:70%">'.$motif_seances[0]->seance_name.'</td>
+                                                <td >'.round((100 * $motif_seances[0]->cnt / $motif_seances_count), 2).' %</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="checkbox"/>&nbsp;Parenting issues</td>
+                                                <td>'.$motif_seances[1]->seance_name.'</td>
+                                                <td>'.round((100 * $motif_seances[1]->cnt / $motif_seances_count), 2).' %</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="checkbox"/>&nbsp;Relationship issues</td>
+                                                <td>'.$motif_seances[2]->seance_name.'</td>
+                                                <td>'.round((100 * $motif_seances[2]->cnt / $motif_seances_count), 2).' %</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="checkbox"/>&nbsp;Mourning</td>
+                                                <td>'.$motif_seances[3]->seance_name.'</td>
+                                                <td>'.round((100 * $motif_seances[3]->cnt / $motif_seances_count), 2).' %</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="checkbox"/>&nbsp;Conflictss</td>
+                                                <td>'.$motif_seances[4]->seance_name.'</td>
+                                                <td>'.round((100 * $motif_seances[4]->cnt / $motif_seances_count), 2).' %</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="checkbox"/>&nbsp;Self-confidence</td>
+                                                <td>'.$motif_seances[5]->seance_name.'</td>
+                                                <td>'.round((100 * $motif_seances[5]->cnt / $motif_seances_count), 2).' %</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="checkbox"/>&nbsp;Addictions</td>
+                                                <td>'.$motif_seances[6]->seance_name.'</td>
+                                                <td>'.round((100 * $motif_seances[6]->cnt / $motif_seances_count), 2).' %</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="checkbox"/>&nbsp;Others</td>
+                                                <td>'.$motif_seances[7]->seance_name.'</td>
+                                                <td>'.round((100 * $motif_seances[7]->cnt / $motif_seances_count), 2).' %</td>
+                                            </tr>
+                                            <tr>
+                                                <td>'.$motif_seances[8]->seance_name.'</td>
+                                                <td>'.round((100 * $motif_seances[8]->cnt / $motif_seances_count), 2).' %</td>
+                                            </tr>
+                                            <tr>
+                                                <td>'.$motif_seances[9]->seance_name.'</td>
+                                                <td>'.round((100 * $motif_seances[9]->cnt / $motif_seances_count), 2).' %</td>
+                                            </tr>
+                                            <tr>
+                                                <td>'.$motif_seances[10]->seance_name.'</td>
+                                                <td>'.round((100 * $motif_seances[10]->cnt / $motif_seances_count), 2).' %</td>
+                                            </tr>
+                                            <tr>
+                                                <td>'.$motif_seances[11]->seance_name.'</td>
+                                                <td>'.round((100 * $motif_seances[11]->cnt / $motif_seances_count), 2).' %</td>
                                             </tr>
                                         </tbody>
                                     </table>
