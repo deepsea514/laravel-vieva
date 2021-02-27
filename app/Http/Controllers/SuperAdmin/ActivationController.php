@@ -82,10 +82,9 @@ class ActivationController extends Controller
                         while (!feof($CSVfp)) {
                             $data = fgetcsv($CSVfp, 1000, ",");
                             //array_push($email_list, $data[0]);
-                            if (is_array($data)) {
-                                array_push($email_list, $data[0]);
+                            if (is_array($data) && $data[3]) {
+                                array_push($email_list, $data[3]);
                             }
-                            //echo $i++;
                         }
                         foreach ($email_list as $recipient) {
                             Mail::to($recipient)->send(new SendMailable($active_code));
