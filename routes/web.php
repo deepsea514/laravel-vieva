@@ -200,6 +200,7 @@ Route::post('/team_month', 'CorporateAdmin\TeamCalendar1@teamMonth');
 Route::post('/team_week', 'CorporateAdmin\TeamCalendar1@teamWeek');
 Route::post('/team_risk', 'CorporateAdmin\TeamCalendar1@teamRisk');
 Route::post('/team_coach', 'CorporateAdmin\TeamCalendar1@teamCoach');
+Route::get('/seadot/{id}', 'CorporateAdmin\TeamCalendar1@seadot');
 //////// Teamadmin //////////////
 //////// Team calender //////////////
 Route::post('/myteam_engage_general', 'TeamAdmin\TeamCalendar@showMyteamEngageGeneral');

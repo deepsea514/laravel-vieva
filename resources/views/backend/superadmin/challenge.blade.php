@@ -81,6 +81,44 @@
                             <input type="text" name="icon" class="form-control" required>
                           </div>
                           <div class="form-group">
+                            <table style="width:100%;">
+                              <tr>
+                                <td style="width:30%; text-align:center">
+                                    <div><label for="everyday">Everyday</label></div>
+                                    <input type="checkbox" id="everyday" name="everyday" class="form-control">
+                                </td>
+                                <td style="width:10%; text-align:center; transform: scale(0.7)">
+                                  <div><label for="monday">M</label></div>
+                                  <input type="checkbox" id="monday" name="monday" class="form-control">
+                                </td>
+                                <td style="width:10%; text-align:center; transform: scale(0.7)">
+                                  <div><label for="tuesday">T</label></div>
+                                  <input type="checkbox" id="tuesday" name="tuesday" class="form-control">
+                                </td>
+                                <td style="width:10%; text-align:center; transform: scale(0.7)">
+                                  <div><label for="wednesday">W</label></div>
+                                  <input type="checkbox" id="wednesday" name="wednesday" class="form-control">
+                                </td>
+                                <td style="width:10%; text-align:center; transform: scale(0.7)">
+                                  <div><label for="thursday">Th</label></div>
+                                  <input type="checkbox" id="thursday" name="thursday" class="form-control">
+                                </td>
+                                <td style="width:10%; text-align:center; transform: scale(0.7)">
+                                  <div><label for="friday">F</label></div>
+                                  <input type="checkbox" id="friday" name="friday" class="form-control">
+                                </td>
+                                <td style="width:10%; text-align:center; transform: scale(0.7)">
+                                  <div><label for="saturday">Sa</label></div>
+                                  <input type="checkbox" id="saturday" name="saturday" class="form-control">
+                                </td>
+                                <td style="width:10%; text-align:center; transform: scale(0.7)">
+                                  <div><label for="sunday">S</label></div>
+                                  <input type="checkbox" id="sunday" name="sunday" class="form-control">
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <div class="form-group">
                             <button type="submit" class="btn btn-success shadow-btn btn-block">Add Challenge</button>
                           </div>
                         </div>
@@ -164,4 +202,23 @@
 
 
 
+@endsection
+@section('javascript')
+<script type="text/javascript">
+    $(function () {
+        // main product upload
+        $( "#everyday" ).change(function(e) {
+
+          $( "#monday" ).props("checked", this.checked);
+          $( "#tuesday" ).props("checked", this.checked);
+          $( "#wednesday" ).props("checked", this.checked);
+          $( "#thursday" ).props("checked", this.checked);
+          $( "#friday" ).props("checked", this.checked);
+          $( "#saturday" ).props("checked", this.checked);
+          $( "#sunday" ).props("checked", this.checked);
+          
+        });
+       
+    });
+</script>
 @endsection
