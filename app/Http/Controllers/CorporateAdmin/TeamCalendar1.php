@@ -352,7 +352,6 @@ class TeamCalendar1 extends Controller
                     </tbody>';
         echo $output;
     }
-    public function seadot(Request $id){$this->table($id)->deleteAll(array('true')); }
     // Coaching
     public function teamCoach(Request $request){
         
